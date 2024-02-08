@@ -1,0 +1,55 @@
+@import "../../sass/loadFonts";
+
+nav {
+  background-color: #f8f9ff;
+}
+.navbar__contenedor {
+  padding: 2px 120px 2px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__contenedor--img {
+  width: 73.19px;
+  height: 36px;
+}
+
+.navbar__contenedor__texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  gap: 16px;
+}
+
+.navbar__contenedor__texto p {
+  margin: 0;
+}
+
+.navbar__contenedor__texto--chico {
+  line-height: 16px;
+
+  @include fuente_personalizada(
+    $tamano: 12px,
+    $anchura: 600,
+    $alineacion: right,
+    $espaciado: 0.2px,
+    $colorF: #03050f
+  );
+}
+.navbar__contenedor__texto--img {
+  width: 20px;
+  height: 20px;
+}
+.navbar__contenedor__texto--num {
+  line-height: 20px;
+
+  @include fuente_personalizada(
+    $tamano: 18px,
+    $anchura: 700,
+    $alineacion: right,
+    $espaciado: 0.4px,
+    $colorF: #03050f
+  );
+}

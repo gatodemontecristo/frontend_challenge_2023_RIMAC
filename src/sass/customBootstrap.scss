@@ -1,0 +1,41 @@
+$form-check-input-checked-bg-color: #0a051e;
+$dark-bg-subtle-dark: #0a051e;
+@import "bootstrap/scss/bootstrap";
+@import "loadFonts";
+
+.btn-dark {
+  background-color: #0a051e;
+  line-height: 24px;
+  @include fuente_personalizada(
+    $tamano: 20px,
+    $anchura: 700,
+    $alineacion: center,
+    $espaciado: 0.4px,
+    $colorF: #ffffff
+  );
+  border-radius: 40px;
+  padding: 20px 40px 20px 40px;
+}
+.form-check-label {
+  line-height: 20px;
+
+  @include fuente_personalizada($tamano: 12px, $espaciado: 0.1px);
+}
+option {
+  line-height: 24px;
+
+@include fuente_personalizada();
+
+}
+.form-floating > label {
+  line-height: 24px;
+
+@include fuente_personalizada();
+}
+
+.w-30{
+  width: 40% !important;
+}
+.w-70{
+  width: 60% !important;
+}

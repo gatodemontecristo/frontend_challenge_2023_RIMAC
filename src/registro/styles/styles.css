@@ -1,0 +1,39 @@
+.formulario__contenedor--blur01 {
+  position: absolute;
+  top: -63px;
+  right: 0;
+  z-index: 1;
+}
+.formulario__contenedor--blur02 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.formulario__contenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 70px;
+  background: #f8f9ff;
+  height: 768px;
+  position: relative;
+}
+.formulario__contenedor__img {
+  width: 600px;
+  height: 640px;
+  padding: 32px 0px 48px 120px;
+  z-index: 15;
+}
+.formulario__contenedor__img--family {
+  width: 520px;
+  height: 600px;
+  gap: 10px;
+
+}
+
+.form-check-input:checked {
+  background-color: #0a051e;
+  border-color: #0a051e;
+}
