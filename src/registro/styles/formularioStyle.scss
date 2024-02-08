@@ -45,6 +45,9 @@
   );
 }
 
+
+
+
 .formulario__condiciones {
   display: flex;
   flex-direction: column;
@@ -65,8 +68,15 @@
   width: 205px;
 }
 .formulario__ingreso {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 352px;
 }
-
+.formulario__registro{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
 

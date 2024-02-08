@@ -32,10 +32,26 @@ option {
 
 @include fuente_personalizada();
 }
+.form-select, .form-control,.form-check-input {
+  border: 1px solid #5E6488;
+}
+
 
 .w-30{
   width: 40% !important;
 }
 .w-70{
   width: 60% !important;
+}
+
+h1,h2,h3,h4,p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.invalid-feedback {
+  @include fuente_personalizada($tamano:12px,$anchura:400,$colorF:#dc3545);
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
 }
