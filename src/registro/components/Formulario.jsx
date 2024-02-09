@@ -1,7 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { useFormulario } from "../hooks";
 import "../styles/formularioStyle.scss";
+import { AuthContext } from "../context";
+import { useContext } from "react";
 export const Formulario = () => {
-
+  const { registrar } = useContext(AuthContext);
+  const navigate = useNavigate();
   const {
     onDNIChange,
     onNumberChange,
@@ -14,10 +18,32 @@ export const Formulario = () => {
     conditionValue1,
     conditionValue2,
     errorValue,
-    onSubmit
+    setErrorValue
   } = useFormulario();
- 
+  
+  const onSubmit = (event) => {
+    event.preventDefault();
+    if (
+      !dniValue.error &&
+      !numberValue.error &&
+      conditionValue1 &&
+      conditionValue2
+    ) {
+      setErrorValue(false);
 
+      console.log("LLLEGPPPPPPPPP");
+      registrar("", "","",numberValue,dniValue);
+      navigate("/cotizar/planes", {
+        replace: true,
+      });
+      
+
+    } else {
+      setErrorValue(true);
+    }
+  };
+
+  
   return (
     <div className="formulario">
       <div className="formulario__texto">

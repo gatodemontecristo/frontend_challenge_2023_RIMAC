@@ -1,8 +1,5 @@
 
-
-
-
-export const getUser = async() => {
+export const getUsuario = async() => {
        const url = `https://rimac-front-end-challenge.netlify.app/api/user.json`;
        try {
           const resp = await fetch(url);

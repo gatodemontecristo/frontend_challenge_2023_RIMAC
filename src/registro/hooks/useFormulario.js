@@ -1,9 +1,9 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export const useFormulario = () => {
   const [dniValue, setDNIValue] = useState({ documento: "", error: true });
   const [numberValue, setNumberValue] = useState({ numero: "", error: true });
-  const [typeDocValue, setTypeDocValue] = useState("pasaporte");
+  const [typeDocValue, setTypeDocValue] = useState("dni");
   const [conditionValue1, setConditionValue1] = useState(false);
   const [conditionValue2, setConditionValue2] = useState(false);
   const [errorValue, setErrorValue] = useState(false);
@@ -37,20 +37,9 @@ export const useFormulario = () => {
     setConditionValue2(!conditionValue2);
   };
 
-  const onSubmit = (event) => {
-    event.preventDefault();
-    if (
-      !dniValue.error &&
-      !numberValue.error &&
-      conditionValue1 &&
-      conditionValue2
-    ) {
-      setErrorValue(false);
-    } else {
-      setErrorValue(true);
-    }
-  };
+ 
 
+ 
   return {
     onDNIChange,
     onNumberChange,
@@ -63,6 +52,6 @@ export const useFormulario = () => {
     conditionValue1,
     conditionValue2,
     errorValue,
-    onSubmit
+    setErrorValue
   };
 };
