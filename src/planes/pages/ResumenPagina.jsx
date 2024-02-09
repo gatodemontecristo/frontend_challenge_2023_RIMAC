@@ -24,7 +24,7 @@ export const ResumenPagina = () => {
         </div>
       </a>
       <h2 className="resumen__contenedor__titulo">Resumen del seguro</h2>
-      <div className="resumen__contenedor__carta">
+      <div className="resumen__contenedor__carta animate__animated animate__fadeInRight">
         <h3 className="resumen__contenedor__carta__titulo">
           Precios calculados para:
         </h3>

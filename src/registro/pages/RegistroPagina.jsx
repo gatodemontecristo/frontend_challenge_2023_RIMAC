@@ -3,7 +3,7 @@ import "../styles/registroStyles.scss";
 export const RegistroPagina = () => {
   return (
     <div className="formulario__contenedor">
-      <div className="formulario__contenedor__img">
+      <div className="formulario__contenedor__img animate__animated animate__fadeInLeft">
         <img
           className="formulario__contenedor__img--family"
           src="../images/familia_bonita.png"

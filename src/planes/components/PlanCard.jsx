@@ -16,7 +16,7 @@ export const PlanCard = ({ propiedades, opcionMiValue }) => {
     }
   };
   return (
-    <div className="planes__contenedor__plan__card">
+    <div className="planes__contenedor__plan__card animate__animated animate__fadeIn">
       <div className="planes__contenedor__plan__card--tag">
         <p>Plan recomendado</p>
       </div>

@@ -57,7 +57,7 @@ export const Formulario1 = () => {
 
         </div>
         <img
-          className="formulario__texto__img--family"
+          className="formulario__texto__img--family animate__animated animate__fadeInRight"
           src="../images/familia_bonita.png"
           alt=""
         />
@@ -183,7 +183,7 @@ export const Formulario1 = () => {
           </a>
         </div>
 
-        <button type="submit" className="formulario__btnFinal btn btn-dark">
+        <button type="submit" className="formulario__btnFinal btn btn-dark  animate__animated animate__fadeIn">
           Cotiza aquí
         </button>
       </form>

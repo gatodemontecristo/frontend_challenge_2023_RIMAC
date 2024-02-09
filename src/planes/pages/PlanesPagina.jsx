@@ -115,7 +115,7 @@ const edadlimite = obtenerEdad(usuario.birthDay);
           <div className="planes__contenedor__opciones__persona">
             <a
               onClick={onOpcionMiChange}
-              className="planes__contenedor__opciones__persona--a"
+              className="planes__contenedor__opciones__persona--a animate__animated animate__fadeInRight"
             >
               <div
                 className={`planes__contenedor__opciones__persona--card ${
@@ -152,7 +152,7 @@ const edadlimite = obtenerEdad(usuario.birthDay);
             </a>
             <a
               onClick={onOpcionAlguienChange}
-              className="planes__contenedor__opciones__persona--a"
+              className="planes__contenedor__opciones__persona--a animate__animated animate__fadeInRight"
             >
               <div
                 className={`planes__contenedor__opciones__persona--card ${
