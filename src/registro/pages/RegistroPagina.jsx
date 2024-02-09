@@ -1,5 +1,5 @@
 import { Formulario } from "../components/formulario";
-import "../styles/styles.css";
+import "../styles/registroStyles.scss";
 export const RegistroPagina = () => {
   return (
     <div className="formulario__contenedor">

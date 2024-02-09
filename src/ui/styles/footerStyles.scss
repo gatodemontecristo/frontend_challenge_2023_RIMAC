@@ -1,35 +1,66 @@
 @import "../../sass/_loadFonts.scss";
+@import "../../sass/responsiveStyles";
 
+.footer__contenedor {
+  display: flex;
 
-.footer__contenedor{
+  align-items: center;
+  background-color: #03050f;
+
+  @include tablet {
+    padding: 32px 24px 32px 24px;
+    flex-direction: column;
+  }
+  @include desktop {
     padding: 32px 120px 32px 120px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    background-color:#03050F;
- 
-    
+  }
 }
-.footer__contenedor--img{
+.footer__contenedor--img {
+  @include tablet {
+    width: 138px;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  @include desktop {
     width: 85.37px;
     height: 41.99px;
+    margin-bottom: 0px;
+
+  }
 }
 
-
-
-
-.footer__contenedor__texto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 20px 0px 20px 0px;
-    gap: 16px;
+.footer__contenedor--linea {
+  border: 1px solid #2b304e;
+  width: 336px;
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: none;
+  }
 }
 
+.footer__contenedor__texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+  gap: 16px;
+}
 
-
-.footer__contenedor__texto--chico{
+.footer__contenedor__texto--chico {
+  @include tablet {
+    @include fuente_BRSonoma(
+      $tamano: 12px,
+      $espaciado: 0.1px,
+      $colorF: #f8f9ff
+    );
+    line-height: 20px;
+  }
+  @include desktop {
+    @include fuente_BRSonoma($tamano: 14px, $colorF: #f8f9ff);
     line-height: 16px;
-    @include fuente_personalizada($tamano:14px,$colorF:#F8F9FF);
+  }
 }

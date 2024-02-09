@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { Footer } from "../../ui/components/Footer";
+import { Footer } from "../../ui/components";
 
 export const RegistroRutas = () => {
   return (

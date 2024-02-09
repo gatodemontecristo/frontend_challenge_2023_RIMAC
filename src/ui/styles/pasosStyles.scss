@@ -1,0 +1,27 @@
+@import "../../sass/_loadFonts.scss";
+.pasos__progreso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px 16px 0px;
+    background-color:  #EDEFFC;
+    gap: 16px;
+}
+
+.pasos__progreso--plans{
+    line-height: 24px;
+    @include fuente_lato($tamano: 16px,$anchura:700, $colorF: #141938,$espaciado:0.2px );
+}
+.pasos__progreso--points{
+    line-height: 24px;
+    @include fuente_lato($tamano: 26px,$anchura:900, $colorF: #4F4FFF,$espaciado:7px );
+    padding-bottom: 12px;
+}
+.pasos__progreso--resumen{
+    line-height: 24px;
+    @include fuente_lato($tamano: 16px,$anchura:700, $colorF: #7981B2,$espaciado:0.2px );
+}
+
+
+

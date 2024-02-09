@@ -1,0 +1,209 @@
+@import "../../sass/loadFonts";
+@import "../../sass/responsiveStyles";
+
+.planes__contenedor{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.planes__contenedor__atras--a{
+  position: absolute;
+  top: 160px;
+  left: 216px;
+  text-decoration: none;
+}
+.planes__contenedor__atras {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+ 
+}
+.planes__contenedor__atras--icon {
+  width: 20px;
+  height: 20px;
+}
+.planes__contenedor__atras--text {
+  @include fuente_lato(
+    $tamano: 18px,
+    $anchura: 700,
+    $alineacion: center,
+    $espaciado: 0.4,
+    $colorF: #4f4fff
+  );
+}
+.planes__contenedor__opciones{
+    display: flex;
+    flex-direction: column;
+    width: 544px;
+    gap: 32px;
+    margin: auto;
+}
+.planes__contenedor__opciones__texto{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.planes__contenedor__opciones__texto--titulo{
+    line-height: 48px;
+    @include fuente_lato($tamano:40px,$anchura:700,$alineacion:center,$espaciado:-0.6px,$colorF:#141938)
+}
+.planes__contenedor__opciones__texto--subtitulo{
+    line-height: 28px;
+    @include fuente_lato($tamano:16px,$anchura:400,$alineacion:center,$espaciado:0.1px,$colorF:#141938)
+}
+
+.planes__contenedor__opciones__persona{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+}
+
+
+
+
+
+.planes__contenedor__opciones__persona--card{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  padding: 16px 24px 40px 24px;
+  border-radius: 24px;
+  width: 256px;
+  height: 212px;
+  background: #FFFFFF;
+  justify-content: center;
+  position: relative;
+ 
+  box-sizing: border-box;
+}
+
+
+.planes__seleccion--sombra{
+  transition-duration: 0.4s;
+  box-shadow: 0px 1px 32px 0px #AEACF359;
+}
+.planes__seleccion--sombra:hover {
+  box-shadow: 0px 1px 32px 0px #aeacf3ed;
+}
+.planes__seleccion--marco{
+  border: 3px solid #03050F;
+}
+
+
+.planes__contenedor__opciones__persona--a{
+  text-decoration: none;
+}
+.planes__contenedor__opciones__persona--card--head{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+}
+.planes__contenedor__opciones__persona--card--img{
+  width: 48px;
+height: 48px;
+}
+.planes__contenedor__opciones__persona--card--titulo{
+  line-height: 28px;
+  @include fuente_lato($tamano:20px,$anchura:900,$espaciado:-0.2px)
+}
+.planes__contenedor__opciones__persona--card--subtitulo{
+  line-height: 20px;
+  @include fuente_lato($tamano:12px,$espaciado:0.2px)
+}
+.planes__contenedor__opciones__persona--card--check{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+
+.planes__contenedor__plan{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.planes__contenedor__plan__card{
+  width: 288px;
+  height: 687px;
+  padding: 40px 32px 48px 32px;
+  border-radius: 24px;
+  gap: 24px;
+  box-shadow: 0px 1px 32px 0px #AEACF359;
+  position: relative;
+}
+.planes__contenedor__plan__card--tag{
+  background: #7DF0BA;
+
+  width: 142px;
+  height: 20px;
+  padding: 2px 8px 2px 8px;
+  border-radius: 6px;
+}
+.planes__contenedor__plan__card--tag p{
+  line-height: 16px;
+  @include fuente_lato($tamano:12px,$anchura:900,$espaciado:0.4px,$colorF:#141938)
+} 
+
+
+
+
+.planes__contenedor__plan__card__titulo{
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.planes__contenedor__plan__card__titulo__dato{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 152px;
+}
+.planes__contenedor__plan__card__titulo__dato--cabecera{
+  line-height: 32px;
+  @include fuente_lato($tamano:24px,$anchura:900,$espaciado:-0.2px,$colorF:#141938)
+}
+.planes__contenedor__plan__card__titulo__dato--pre{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.planes__contenedor__plan__card__titulo__dato--ti{
+  line-height: 16px;
+  @include fuente_lato($tamano:12px,$anchura:900,$espaciado:0.6px,$colorF:#7981B2)
+}
+.planes__contenedor__plan__card__titulo__dato--antes{
+  line-height: 20px;
+  @include fuente_lato($tamano:14px,$espaciado:-0.2px,$colorF:#7981B2);
+  text-decoration:line-through;
+}
+.planes__contenedor__plan__card__titulo__dato--despues{
+  line-height: 28px;
+  @include fuente_lato($tamano:20px,$anchura:900,$espaciado:-0.2px,$colorF:#141938)
+}
+.planes__contenedor__plan__card__titulo--img{
+  width: 56px;
+height: 56px;
+
+}
+.planes__contenedor__plan__card__titulo--linea{
+  border: 1px solid #D7DBF5;
+}
+.planes__contenedor__plan__card__lista{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.planes__contenedor__plan__card__lista--li{
+  line-height: 28px;
+  @include fuente_lato($tamano:16px,$espaciado:0.1px,$colorF:#141938);
+  margin-bottom:24px;
+}
+
+.planes__contenedor__plan__card__titulo--btn{
+  width: 100%;
+}

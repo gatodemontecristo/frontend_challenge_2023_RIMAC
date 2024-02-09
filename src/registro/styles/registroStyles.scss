@@ -1,14 +1,35 @@
+
+@import "../../sass/responsiveStyles";
+
 .formulario__contenedor--blur01 {
   position: absolute;
-  top: -63px;
+  
   right: 0;
   z-index: 1;
+  @include tablet  {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+  }
+  @include desktop  {
+    width: auto;
+    height: auto;
+    top: -63px;
+  }
 }
 .formulario__contenedor--blur02 {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 1;
+  @include tablet  {
+    width: 300px;
+    height: 300px;
+  }
+  @include desktop  {
+    width: auto;
+    height: auto;
+  }
 }
 
 .formulario__contenedor {
@@ -17,14 +38,27 @@
   justify-content: flex-start;
   gap: 70px;
   background: #f8f9ff;
-  height: 768px;
+  
   position: relative;
+  @include tablet  {
+    height: 808px;
+  }
+  @include desktop  {
+    height: 768px;
+  }
+  
 }
 .formulario__contenedor__img {
-  width: 600px;
-  height: 640px;
+  max-width: 600px;
+  max-height: 640px;
   padding: 32px 0px 48px 120px;
   z-index: 15;
+  @include tablet  {
+    display: none;
+  }
+  @include desktop  {
+    display: block;
+  }
 }
 .formulario__contenedor__img--family {
   width: 520px;

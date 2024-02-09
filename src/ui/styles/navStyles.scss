@@ -1,18 +1,35 @@
 @import "../../sass/loadFonts";
+@import "../../sass/responsiveStyles";
 
 nav {
   background-color: #f8f9ff;
 }
 .navbar__contenedor {
-  padding: 2px 120px 2px 120px;
+ 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  @include tablet  {
+    padding: 12px 24px 12px 24px;
+  
+   }
+   @include desktop  {
+    padding: 2px 120px 2px 120px;
+  
+   }
 }
 .navbar__contenedor--img {
-  width: 73.19px;
-  height: 36px;
+ 
+  @include tablet  {
+    width: 65.05px;
+    height: 32px;
+  }
+  @include desktop  {
+    width: 73.19px;
+    height: 36px;
+  
+   }
 }
 
 .navbar__contenedor__texto {
@@ -30,13 +47,20 @@ nav {
 .navbar__contenedor__texto--chico {
   line-height: 16px;
 
-  @include fuente_personalizada(
+  @include fuente_BRSonoma(
     $tamano: 12px,
     $anchura: 600,
     $alineacion: right,
     $espaciado: 0.2px,
     $colorF: #03050f
   );
+ 
+  @include tablet  {
+    display: none;
+  }
+  @include desktop  {
+    display: block;
+  }
 }
 .navbar__contenedor__texto--img {
   width: 20px;
@@ -45,11 +69,20 @@ nav {
 .navbar__contenedor__texto--num {
   line-height: 20px;
 
-  @include fuente_personalizada(
+  @include fuente_BRSonoma(
     $tamano: 18px,
     $anchura: 700,
     $alineacion: right,
     $espaciado: 0.4px,
     $colorF: #03050f
   );
+  @include tablet  {
+   font-size: 16px;
+ 
+  }
+  @include desktop  {
+    font-size: 18px;
+ 
+  
+   }
 }

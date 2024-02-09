@@ -6,12 +6,12 @@ export const authReducer = (state={},action) =>{
     switch(action.type){
         case types.registrar: return {
             ...state,
-            dni:action.payload,
-            celular:action.payload
+            autentico:true,
+            user:action.payload
         };
         case types.salir: return {
-            dni:null,
-            celular:null
+            autentico:false,
+            user:null
         };
         default:return state;
     }
