@@ -4,7 +4,7 @@ import { Pasos } from "../../ui/components";
 export const CotizarRutas = () => {
   return (
     <>
-    <Pasos></Pasos>
+    
       <Outlet></Outlet>
       
     </>

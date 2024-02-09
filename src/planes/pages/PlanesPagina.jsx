@@ -1,11 +1,12 @@
 import { useContext, useEffect, useState } from "react";
 import "../styles/PlanesStyles.scss";
 import "../styles/PlanesSpinner.css";
-import { useFetchPlans, useFetchUser } from "../hook";
+import {  useFetchUser } from "../hook";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../registro/context";
 import { PlanCard } from "../components";
 import { getPlans } from "../helpers/getPlans";
+import { Pasos } from "../../ui/components";
 export const PlanesPagina = () => {
   const [opcionMiValue, setOpcionMiValue] = useState(false);
   const [opcionAlguienValue, setOpcionAlguienValue] = useState(false);
@@ -86,6 +87,8 @@ const edadlimite = obtenerEdad(usuario.birthDay);
   };
 
   return (
+    <>
+    <Pasos></Pasos>
     <div className="planes__contenedor">
       <a className="planes__contenedor__atras--a" onClick={onAtras}>
         <div className="planes__contenedor__atras">
@@ -204,5 +207,6 @@ const edadlimite = obtenerEdad(usuario.birthDay);
         </div>
       )}
     </div>
+    </>
   );
 };

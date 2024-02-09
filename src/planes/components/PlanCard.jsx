@@ -1,58 +1,65 @@
-import { PlanItem } from "./PlanItem"
+import { useNavigate } from "react-router-dom";
+import { PlanItem } from "./PlanItem";
 
-export const PlanCard = ({propiedades,opcionMiValue}) => {
- 
-
-  const calculoDesc = ()=>{
-    if(!opcionMiValue){
-      return propiedades.price*0.95.toFixed(2);
-    }else{
+export const PlanCard = ({ propiedades, opcionMiValue }) => {
+  const navigate = useNavigate();
+  const onResumen = () => {
+    navigate("/cotizar/resumen", {
+      replace: true,
+    });
+  };
+  const calculoDesc = () => {
+    if (!opcionMiValue) {
+      return propiedades.price * (0.95).toFixed(2);
+    } else {
       return propiedades.price;
     }
-  } 
+  };
   return (
     <div className="planes__contenedor__plan__card">
-    <div className="planes__contenedor__plan__card--tag">
-      <p>Plan recomendado</p>
-    </div>
-
-    <div className="planes__contenedor__plan__card__titulo">
-      <div className="planes__contenedor__plan__card__titulo__dato">
-        <h3 className="planes__contenedor__plan__card__titulo__dato--cabecera">
-        {propiedades.name}
-        </h3>
-        <div className="planes__contenedor__plan__card__titulo__dato--pre">
-          <p className="planes__contenedor__plan__card__titulo__dato--ti">
-            Costo del plan
-          </p>
-          <p className={`planes__contenedor__plan__card__titulo__dato--antes  ${opcionMiValue ? "collapse " : ""}`}>
-            ${propiedades.price} antes
-          </p>
-          
-
-          <p className="planes__contenedor__plan__card__titulo__dato--despues">
-            ${calculoDesc()} al mes
-          </p>
-        </div>
+      <div className="planes__contenedor__plan__card--tag">
+        <p>Plan recomendado</p>
       </div>
 
-      <img
-        className="planes__contenedor__plan__card__titulo--img"
-        src="../images/IcHospitalLight.png"
-        alt=""
-      />
-    </div>
+      <div className="planes__contenedor__plan__card__titulo">
+        <div className="planes__contenedor__plan__card__titulo__dato">
+          <h3 className="planes__contenedor__plan__card__titulo__dato--cabecera">
+            {propiedades.name}
+          </h3>
+          <div className="planes__contenedor__plan__card__titulo__dato--pre">
+            <p className="planes__contenedor__plan__card__titulo__dato--ti">
+              Costo del plan
+            </p>
+            <p
+              className={`planes__contenedor__plan__card__titulo__dato--antes  ${
+                opcionMiValue ? "collapse " : ""
+              }`}
+            >
+              ${propiedades.price} antes
+            </p>
 
-    <hr className="planes__contenedor__plan__card__titulo--linea" />
+            <p className="planes__contenedor__plan__card__titulo__dato--despues">
+              ${calculoDesc()} al mes
+            </p>
+          </div>
+        </div>
 
-    <div className="planes__contenedor__plan__card__lista">
-      <ul className="planes__contenedor__plan__card__lista--ul">
+        <img
+          className="planes__contenedor__plan__card__titulo--img"
+          src="../images/IcHospitalLight.png"
+          alt=""
+        />
+      </div>
 
-      {propiedades.description.map((texto, i) => (
-            <PlanItem  key={i} texto={texto}></PlanItem>
+      <hr className="planes__contenedor__plan__card__titulo--linea" />
+
+      <div className="planes__contenedor__plan__card__lista">
+        <ul className="planes__contenedor__plan__card__lista--ul">
+          {propiedades.description.map((texto, i) => (
+            <PlanItem key={i} texto={texto}></PlanItem>
           ))}
 
-        {/* <li className="planes__contenedor__plan__card__lista--li">
+          {/* <li className="planes__contenedor__plan__card__lista--li">
           Consultas en clínica para cualquier especialidad.
         </li>
         <li className="planes__contenedor__plan__card__lista--li">
@@ -61,12 +68,11 @@ export const PlanCard = ({propiedades,opcionMiValue}) => {
         <li className="planes__contenedor__plan__card__lista--li">
           Atención médica en más de 200 clínicas del país.
         </li> */}
-      </ul>
-      
+        </ul>
+      </div>
+      <button className="planes__contenedor__plan__card__titulo--btn btn btn-danger" onClick={onResumen}>
+        Seleccionar Plan
+      </button>
     </div>
-    <button className="planes__contenedor__plan__card__titulo--btn btn btn-danger">
-      Seleccionar Plan
-    </button>
-  </div>
-  )
-}
+  );
+};

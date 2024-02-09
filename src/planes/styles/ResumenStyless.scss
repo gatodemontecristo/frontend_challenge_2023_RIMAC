@@ -3,9 +3,7 @@
 
 
 .resumen__contenedor__atras--a{
-    position: absolute;
-    top: 160px;
-    left: 216px;
+    
     text-decoration: none;
     @include tablet  {
       visibility: hidden ;
@@ -42,30 +40,90 @@
   .resumen__contenedor{
     display: flex;
     flex-direction: column;
-    gap: 48px;
-    width: 928px;
+  
+    
+    
     justify-content: center;
-    margin-top: 50px;
     margin-right: auto;
     margin-left: auto;
+
+    @include tablet  {
+      width: 384px;
+      margin-top: 0px;
+      gap: 40px;
+    }
+    @include desktop  {
+      width: 928px;
+      margin-top: 50px;
+      gap: 48px;
+    }
   }
 
 .resumen__contenedor__titulo {
-  line-height: 48px;
-  @include fuente_lato(
+ 
+  
+  @include tablet  {
+    line-height: 40px;
+    @include fuente_lato($tamano:32px,$anchura:700,$alineacion:center,$espaciado:-0.6px,$colorF:#141938);
+  }
+  @include desktop  {
+    line-height: 48px;
+    @include fuente_lato(
     $tamano: 40px,
     $anchura: 700,
     $alineacion: left,
     $espaciado: -0.6px,
     $colorF: #141938
   );
+  }
 }
+
+
+
 .resumen__contenedor__carta{
+    display: flex;
+    flex-direction: column;
     padding: 24px 32px 24px 32px;
     gap: 16px;
     border-radius: 24px;
     box-shadow: 0px 1px 24px 0px #AEACF340;
 
+}
+.resumen__contenedor__carta__titulo{
+    line-height: 16px;
+    @include fuente_lato($tamano:10px,$anchura:900,$espaciado:0.8px,$colorF:#141938)
+}
+.resumen__contenedor__carta__mi{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+.resumen__contenedor__carta__mi--img{
+    width: 24px;
+height: 24px;
+
+}
+.resumen__contenedor__carta__mi--nombre{
+    line-height: 28px;
+    @include fuente_lato($tamano:20px,$anchura:700,$espaciado:-0.2px,$colorF:#141938)
+}
+.resumen__contenedor__carta--linea{
+    border: 1px solid #D7DBF5;
+    margin: 0;
+}
+.resumen__contenedor__carta__datos{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.resumen__contenedor__carta__datos--titulo{
+    line-height: 24px;
+    @include fuente_lato($tamano:16px,$anchura:700,$espaciado:0.2,$colorF:#141938)
+}
+.resumen__contenedor__carta__datos--valor{
+    line-height: 24px;
+    @include fuente_lato($tamano:14px,$anchura:400,$espaciado:0.1,$colorF:#141938)
 }
 
 
