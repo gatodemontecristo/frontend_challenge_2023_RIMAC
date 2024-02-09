@@ -11,6 +11,8 @@
     <br />
     <a href="https://www.rimac.com/"><strong>Enlace de la empresa»</strong></a>
     <br />
+     <a href="https://frontend-challenge-rimac.netlify.app/"><strong>Proyecto desplegado 🙌»</strong></a>
+    <br />
   </p>
 </div>
 
