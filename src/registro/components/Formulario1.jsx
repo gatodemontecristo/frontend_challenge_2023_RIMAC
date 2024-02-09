@@ -97,7 +97,7 @@ export const Formulario1 = () => {
                 onChange={onDNIChange}
                 value={dniValue.documento}
               />
-              <label for="floatingTextarea">Nro. de documento</label>
+              <label htmlFor="floatingTextarea">Nro. de documento</label>
             </div>
             <div className="invalid-feedback">
               {typeDocValue == "dni"
@@ -121,7 +121,7 @@ export const Formulario1 = () => {
               onChange={onNumberChange}
               value={numberValue.numero}
             />
-            <label for="floatingInputGroup3">Celular</label>
+            <label htmlFor="floatingInputGroup3">Celular</label>
             <div className="invalid-feedback">
             Ingrese un número de celular válido (10 dígitos)
           </div>
@@ -144,7 +144,7 @@ export const Formulario1 = () => {
               checked={conditionValue1}
               onChange={onConditionChange1}
             />
-            <label className="form-check-label" for="flexCheckDefault">
+            <label className="form-check-label" htmlFor="flexCheckDefault">
               Acepto lo Política de Privacidad
             </label>
             <div className="invalid-feedback">
@@ -167,7 +167,7 @@ export const Formulario1 = () => {
               checked={conditionValue2}
               onChange={onConditionChange2}
             />
-            <label className="form-check-label" for="flexCheckDefault">
+            <label className="form-check-label" htmlFor="flexCheckDefault">
               Acepto la Política Comunicaciones Comerciales
             </label>
             <div className="invalid-feedback">

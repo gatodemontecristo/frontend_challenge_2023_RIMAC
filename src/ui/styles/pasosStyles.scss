@@ -1,5 +1,9 @@
 @import "../../sass/_loadFonts.scss";
+@import "../../sass/responsiveStyles";
 .pasos__progreso{
+   
+}
+.pasos__progreso__contenedor{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,6 +11,14 @@
     padding: 16px 0px 16px 0px;
     background-color:  #EDEFFC;
     gap: 16px;
+    @include tablet  {
+        display: none ;
+      
+       }
+       @include desktop  {
+        display: flex  ;
+      
+       }
 }
 
 .pasos__progreso--plans{
@@ -24,4 +36,35 @@
 }
 
 
+
+
+.pasos__progreso__bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px 12px 24px;
+    gap: 16px;
+    background-color: #FAFBFF;
+    @include tablet  {
+        visibility: visible ;
+      
+       }
+       @include desktop  {
+        visibility: hidden  ;
+      
+       }
+}
+.pasos__progreso__bar--progress{
+    width: 70%;
+    height: 20px;
+}
+.pasos__progreso__bar--icon{
+    width: 24px;
+    height: 24px;
+}
+.pasos__progreso__bar--texto{
+    line-height: 16px;
+    @include fuente_lato($tamano: 10px,$anchura:900, $colorF: #141938,$espaciado:0.8px );
+}
 

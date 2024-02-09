@@ -62,11 +62,11 @@ export const PlanCard = ({propiedades,opcionMiValue}) => {
           Atención médica en más de 200 clínicas del país.
         </li> */}
       </ul>
-      <button className="planes__contenedor__plan__card__titulo--btn btn btn-danger">
+      
+    </div>
+    <button className="planes__contenedor__plan__card__titulo--btn btn btn-danger">
       Seleccionar Plan
     </button>
-    </div>
-   
   </div>
   )
 }

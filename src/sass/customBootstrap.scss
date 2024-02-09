@@ -118,4 +118,6 @@ p {
   @include fuente_lato($tamano:18px,$anchura:700,$alineacion:center,$espaciado:0.4px,$colorF:#FFFFFF)
 }
 
-
+.progress-bar {
+  background-color: #4F4FFF;
+}

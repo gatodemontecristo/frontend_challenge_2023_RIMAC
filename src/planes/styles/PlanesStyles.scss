@@ -7,12 +7,27 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @include tablet  {
+    margin-top: 40px;
+  }
+  @include desktop  {
+    margin-top: 40px;
+  }
 }
 .planes__contenedor__atras--a{
   position: absolute;
   top: 160px;
   left: 216px;
   text-decoration: none;
+  @include tablet  {
+    visibility: hidden ;
+  
+   }
+   @include desktop  {
+    visibility: visible  ;
+  
+   }
 }
 .planes__contenedor__atras {
   display: flex;
@@ -37,9 +52,23 @@
 .planes__contenedor__opciones{
     display: flex;
     flex-direction: column;
-    width: 544px;
-    gap: 32px;
+    
+   
+
+
+
     margin: auto;
+  @include tablet  {
+   width: 384px;
+  padding: 0px 24px 0px 24px;
+  gap: 56px; 
+ }
+ @include desktop  {
+  width: 544px;
+
+  gap: 32px;
+ }
+
 }
 .planes__contenedor__opciones__texto{
     display: flex;
@@ -47,19 +76,47 @@
     gap: 8px;
 }
 .planes__contenedor__opciones__texto--titulo{
-    line-height: 48px;
-    @include fuente_lato($tamano:40px,$anchura:700,$alineacion:center,$espaciado:-0.6px,$colorF:#141938)
+   
+    @include tablet  {
+      @include fuente_lato($tamano:28px,$anchura:700,$alineacion:left,$espaciado:-0.2px,$colorF:#141938);
+      line-height: 36px;
+     }
+     @include desktop  {
+      @include fuente_lato($tamano:40px,$anchura:700,$alineacion:center,$espaciado:-0.6px,$colorF:#141938);
+      line-height: 48px;
+     }
+
+
 }
 .planes__contenedor__opciones__texto--subtitulo{
     line-height: 28px;
-    @include fuente_lato($tamano:16px,$anchura:400,$alineacion:center,$espaciado:0.1px,$colorF:#141938)
+    
+
+    @include tablet  {
+      @include fuente_lato($tamano:16px,$anchura:400,$alineacion:left,$espaciado:0.1px,$colorF:#141938);
+      line-height: 28px;
+     }
+     @include desktop  {
+      @include fuente_lato($tamano:16px,$anchura:400,$alineacion:center,$espaciado:0.1px,$colorF:#141938);
+      line-height: 48px;
+     }
 }
 
 .planes__contenedor__opciones__persona{
   display: flex;
-  flex-direction: row;
+  
   justify-content: center;
-  gap: 32px;
+  
+
+  @include tablet  {
+    flex-direction: column;
+    gap: 24px;
+   }
+   @include desktop  {
+    flex-direction: row;
+    gap: 32px;
+   }
+
 }
 
 
@@ -72,14 +129,23 @@
   gap:8px;
   padding: 16px 24px 40px 24px;
   border-radius: 24px;
-  width: 256px;
+  
   height: 212px;
   background: #FFFFFF;
   justify-content: center;
   position: relative;
  
   box-sizing: border-box;
+  @include tablet  {
+    width: 336px;
+    height: 160px;
+   }
+   @include desktop  {
+    width: 256px;
+    height: 212px;
+   }
 }
+
 
 
 .planes__seleccion--sombra{
@@ -99,21 +165,56 @@
 }
 .planes__contenedor__opciones__persona--card--head{
   display: flex;
-  flex-direction: column;
+  
   gap:8px;
+
+  @include tablet  {
+    flex-direction: row;
+   }
+   @include desktop  {
+    flex-direction: column;
+   }
 }
 .planes__contenedor__opciones__persona--card--img{
+  
+@include tablet  {
+  width: 32px;
+  height: 32px;
+ }
+ @include desktop  {
   width: 48px;
-height: 48px;
+  height: 48px;
+ }
 }
 .planes__contenedor__opciones__persona--card--titulo{
   line-height: 28px;
-  @include fuente_lato($tamano:20px,$anchura:900,$espaciado:-0.2px)
+ 
+
+  @include tablet  {
+    @include fuente_lato($tamano:20px,$anchura:900,$espaciado:-0.2px,$colorF:#141938)
+   }
+   @include desktop  {
+    @include fuente_lato($tamano:20px,$anchura:900,$espaciado:-0.2px)
+   }
 }
+
+
+
+
 .planes__contenedor__opciones__persona--card--subtitulo{
   line-height: 20px;
-  @include fuente_lato($tamano:12px,$espaciado:0.2px)
+  @include tablet  {
+    @include fuente_lato($tamano:12px,$anchura:400,$alineacion:left,$espaciado:0.2,$colorF:#141938)
+   }
+   @include desktop  {
+    @include fuente_lato($tamano:12px,$espaciado:0.2px)
+   }
+ 
 }
+
+
+
+
 .planes__contenedor__opciones__persona--card--check{
   position: absolute;
   top: 20px;
@@ -124,8 +225,16 @@ height: 48px;
 .planes__contenedor__plan{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  
   gap: 32px;
+  @include tablet  {
+    justify-content: flex-start;
+    margin-left: 60px;
+   }
+   @include desktop  {
+    justify-content: center;
+    margin-left: 0;
+   }
 }
 .planes__contenedor__plan__card{
   width: 288px;
@@ -197,7 +306,7 @@ height: 56px;
 .planes__contenedor__plan__card__lista{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  flex: 1;
 }
 .planes__contenedor__plan__card__lista--li{
   line-height: 28px;

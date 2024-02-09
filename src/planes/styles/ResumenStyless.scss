@@ -1,0 +1,71 @@
+@import "../../sass/loadFonts";
+@import "../../sass/responsiveStyles";
+
+
+.resumen__contenedor__atras--a{
+    position: absolute;
+    top: 160px;
+    left: 216px;
+    text-decoration: none;
+    @include tablet  {
+      visibility: hidden ;
+    
+     }
+     @include desktop  {
+      visibility: visible  ;
+    
+     }
+  }
+.resumen__contenedor__atras {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+   
+  }
+  .resumen__contenedor__atras--icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .resumen__contenedor__atras--text {
+    @include fuente_lato(
+      $tamano: 18px,
+      $anchura: 700,
+      $alineacion: center,
+      $espaciado: 0.4,
+      $colorF: #4f4fff
+    );
+  }
+
+
+  .resumen__contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 928px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+.resumen__contenedor__titulo {
+  line-height: 48px;
+  @include fuente_lato(
+    $tamano: 40px,
+    $anchura: 700,
+    $alineacion: left,
+    $espaciado: -0.6px,
+    $colorF: #141938
+  );
+}
+.resumen__contenedor__carta{
+    padding: 24px 32px 24px 32px;
+    gap: 16px;
+    border-radius: 24px;
+    box-shadow: 0px 1px 24px 0px #AEACF340;
+
+}
+
+
