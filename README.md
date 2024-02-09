@@ -23,6 +23,7 @@
 * 	![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 * 	![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 * 	![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+* 	![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
 ### Páginas/librerías usadas
 
@@ -41,7 +42,7 @@ Página React Router -> https://reactrouter.com/en/main
 ![706shots_so](https://github.com/gatodemontecristo/frontend_challenge_2023_RIMAC/assets/61488294/46590755-faca-45c3-bc7e-959d3484521c)
 
 
-### Planes y ciberturas
+### Planes y coberturas
 
 ![723shots_so](https://github.com/gatodemontecristo/frontend_challenge_2023_RIMAC/assets/61488294/2d002ffe-2c64-4c95-8257-2a16e746f322)
 
