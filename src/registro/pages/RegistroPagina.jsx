@@ -1,4 +1,4 @@
-import { Formulario } from "../components/formulario";
+import { Formulario1 } from "../components/Formulario1";
 import "../styles/registroStyles.scss";
 export const RegistroPagina = () => {
   return (
@@ -10,7 +10,7 @@ export const RegistroPagina = () => {
           alt=""
         />
       </div>
-      <Formulario></Formulario>
+      <Formulario1></Formulario1>
       
       
       <img

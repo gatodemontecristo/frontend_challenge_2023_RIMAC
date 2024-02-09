@@ -196,7 +196,7 @@ const edadlimite = obtenerEdad(usuario.birthDay);
         >
           
            {planesColeccion.map((propiedades, i) => (
-            <PlanCard key={i} {...propiedades}></PlanCard>
+            <PlanCard key={i} propiedades={propiedades} opcionMiValue={opcionMiValue}></PlanCard>
           ))}
 
 

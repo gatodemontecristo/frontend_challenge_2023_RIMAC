@@ -1,6 +1,15 @@
 import { PlanItem } from "./PlanItem"
 
-export const PlanCard = (propiedades) => {
+export const PlanCard = ({propiedades,opcionMiValue}) => {
+ 
+
+  const calculoDesc = ()=>{
+    if(!opcionMiValue){
+      return propiedades.price*0.95.toFixed(2);
+    }else{
+      return propiedades.price;
+    }
+  } 
   return (
     <div className="planes__contenedor__plan__card">
     <div className="planes__contenedor__plan__card--tag">
@@ -16,11 +25,13 @@ export const PlanCard = (propiedades) => {
           <p className="planes__contenedor__plan__card__titulo__dato--ti">
             Costo del plan
           </p>
-          <p className="planes__contenedor__plan__card__titulo__dato--antes">
-            $99 antes
+          <p className={`planes__contenedor__plan__card__titulo__dato--antes  ${opcionMiValue ? "collapse " : ""}`}>
+            ${propiedades.price} antes
           </p>
+          
+
           <p className="planes__contenedor__plan__card__titulo__dato--despues">
-            ${propiedades.price} al mes
+            ${calculoDesc()} al mes
           </p>
         </div>
       </div>

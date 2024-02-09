@@ -1,9 +1,10 @@
+
 import { useNavigate } from "react-router-dom";
 import { useFormulario } from "../hooks";
 import "../styles/formularioStyle.scss";
 import { AuthContext } from "../context";
 import { useContext } from "react";
-export const Formulario = () => {
+export const Formulario1 = () => {
   const { registrar } = useContext(AuthContext);
   const navigate = useNavigate();
   const {
