@@ -31,7 +31,6 @@ export const Formulario = () => {
     ) {
       setErrorValue(false);
 
-      console.log("LLLEGPPPPPPPPP");
       registrar("", "","",numberValue,dniValue);
       navigate("/cotizar/planes", {
         replace: true,

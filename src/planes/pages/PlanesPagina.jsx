@@ -1,5 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../styles/PlanesStyles.scss";
+import "../styles/PlanesSpinner.css";
+import {  useFetchUser } from "../hook";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../registro/context";
 export const PlanesPagina = () => {
   const [opcionMiValue, setOpcionMiValue] = useState(false);
   const [opcionAlguienValue, setOpcionAlguienValue] = useState(false);
@@ -17,10 +21,20 @@ export const PlanesPagina = () => {
     }
   };
 
+  const { usuario, isLoading } = useFetchUser();
+  const {  salir } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const onAtras = () => {
+    salir();
+    navigate("/registro", {
+      replace: true,
+    });
+  };
+
   return (
     <div className="planes__contenedor">
-      <a className="planes__contenedor__atras--a" href="">
-        <div className="planes__contenedor__atras">
+      <a className="planes__contenedor__atras--a" onClick={onAtras}>
+        <div className="planes__contenedor__atras" >
           <img
             className="planes__contenedor__atras--icon"
             src="../images/Icon-button.png"
@@ -29,11 +43,13 @@ export const PlanesPagina = () => {
           <p className="planes__contenedor__atras--text">Volver</p>
         </div>
       </a>
-
+      {isLoading ? (
+        <span className="loader"></span>
+      ) : (
       <div className="planes__contenedor__opciones">
         <div className="planes__contenedor__opciones__texto">
           <h2 className="planes__contenedor__opciones__texto--titulo">
-            Rocío ¿Para quién deseas cotizar?
+            {usuario.name} ¿Para quién deseas cotizar?
           </h2>
           <p className="planes__contenedor__opciones__texto--subtitulo">
             Selecciona la opción que se ajuste más a tus necesidades.
@@ -114,9 +130,7 @@ export const PlanesPagina = () => {
             </div>
           </a>
         </div>
-      </div>
-
-      <div className="planes__contenedor__plan">
+        <div className="planes__contenedor__plan">
         <div className="planes__contenedor__plan__card">
           <div className="planes__contenedor__plan__card--tag">
             <p>Plan recomendado</p>
@@ -168,6 +182,10 @@ export const PlanesPagina = () => {
          
         </div>
       </div>
+      </div> 
+     
+     
+      )}
     </div>
   );
 };
