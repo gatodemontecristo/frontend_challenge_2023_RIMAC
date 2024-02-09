@@ -3,11 +3,11 @@ import { getPlans } from '../helpers/getPlans';
 
 export const useFetchPlans = () => {
     const [planes, setplanes] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading2, setIsLoading] = useState(true);
 
 
     const getPlanes = async () => {
-        const planesArreglo = await getPlans;
+        const planesArreglo = await getPlans();
         setplanes(planesArreglo);
         setIsLoading(false);
       };
@@ -16,6 +16,6 @@ export const useFetchPlans = () => {
         getPlanes();
       }, []);
 
-  return  {planes,isLoading}
+  return  {planes,isLoading2}
   
 }
