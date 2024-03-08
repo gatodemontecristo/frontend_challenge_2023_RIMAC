@@ -52,16 +52,11 @@ export const PlanesPagina = () => {
 
   
 
-  const { user, registrar, salir } = useContext(AuthContext);
+  const { actualizar, salir } = useContext(AuthContext);
+  
   useEffect(() => {
-    registrar(
-      usuario.name,
-      usuario.lastName,
-      usuario.birthDay,
-      user.phone,
-      user.document
-    );
-  }, []);
+    actualizar( usuario.name, usuario.lastName, usuario.birthDay);
+  }, [usuario]);
 
   //
  

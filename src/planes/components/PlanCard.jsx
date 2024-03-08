@@ -1,9 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { PlanItem } from "./PlanItem";
+import { AuthContext } from "../../registro/context";
+import { useContext } from "react";
 
 export const PlanCard = ({ propiedades, opcionMiValue }) => {
   const navigate = useNavigate();
+
+  const { seleccionar } = useContext(AuthContext);
   const onResumen = () => {
+    seleccionar(propiedades.name,`$${calculoDesc()} al mes`);
     navigate("/cotizar/resumen", {
       replace: true,
     });

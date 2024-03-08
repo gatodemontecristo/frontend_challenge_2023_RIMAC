@@ -1,8 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/ResumenStyless.scss";
 import { Pasos2 } from "../../ui/components";
+import { AuthContext } from "../../registro/context";
+import { useContext } from "react";
 export const ResumenPagina = () => {
+
   const navigate = useNavigate();
+  const { user } = useContext(AuthContext);
+  console.log(user);
+
   const onAtras = () => {
     navigate("/cotizar/planes", {
       replace: true,
@@ -35,19 +41,19 @@ export const ResumenPagina = () => {
             alt=""
           />
           <p className="resumen__contenedor__carta__mi--nombre">
-            Rocio Miranda Díaz
+          {user.name} {user.lastName}
           </p>
         </div>
         <hr className="resumen__contenedor__carta--linea"/>
         <div className="resumen__contenedor__carta__datos">
           <h3 className="resumen__contenedor__carta__datos--titulo">Responsable de pago</h3>
-          <p className="resumen__contenedor__carta__datos--valor">DNI: 444888888</p>
-          <p className="resumen__contenedor__carta__datos--valor">Celular: 5130216147</p>
+          <p className="resumen__contenedor__carta__datos--valor">DNI: {user.document}</p>
+          <p className="resumen__contenedor__carta__datos--valor">Celular: {user.phone}</p>
         </div>
         <div className="resumen__contenedor__carta__datos">
           <h3 className="resumen__contenedor__carta__datos--titulo">Plan elegido</h3>
-          <p className="resumen__contenedor__carta__datos--valor">Plan en Casa y Clínica</p>
-          <p className="resumen__contenedor__carta__datos--valor">Costo del Plan: $99 al mes</p>
+          <p className="resumen__contenedor__carta__datos--valor">{user.plan}</p>
+          <p className="resumen__contenedor__carta__datos--valor">{user.costo}</p>
         </div>
       </div>
     </div>

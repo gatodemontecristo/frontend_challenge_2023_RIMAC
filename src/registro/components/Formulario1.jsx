@@ -31,7 +31,7 @@ export const Formulario1 = () => {
       conditionValue2
     ) {
       setErrorValue(false);
-      registrar("", "","",numberValue.numero,dniValue.documento);
+      registrar(numberValue.numero,dniValue.documento);
       navigate("/cotizar/planes", {
         replace: true,
       });
