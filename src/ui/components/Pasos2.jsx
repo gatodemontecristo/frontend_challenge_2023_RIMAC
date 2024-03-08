@@ -8,9 +8,7 @@ export const Pasos2 = () => {
   const { salir } = useContext(AuthContext);
   const onAtras = () => {
     salir();
-    navigate("/registro", {
-      replace: true,
-    });
+    navigate("/registro");
   };
   
   return (

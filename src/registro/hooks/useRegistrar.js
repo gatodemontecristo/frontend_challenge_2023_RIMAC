@@ -2,11 +2,16 @@ import { authReducer } from "../context";
 import { types } from "../types/types";
 import { useReducer } from "react";
 const init = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const user = JSON.parse(localStorage.getItem("user"));
+  // return {
+  //   autentico: !!user,
+  //   user: user ?? {},
+  // };
   return {
-    autentico: !!user,
-    user: user ?? {},
+    autentico: false,
+    user: {},
   };
+
 };
 export const useRegistrar = () => {
   const [authState, dispatch] = useReducer(authReducer, {}, init);
@@ -17,7 +22,6 @@ export const useRegistrar = () => {
       type: types.registrar,
       payload: { phone, document },
     };
-    localStorage.setItem("user", JSON.stringify(user));
     dispatch(action);
   };
 
@@ -37,12 +41,11 @@ export const useRegistrar = () => {
       type: types.seleccionar,
       payload: { plan, costo },
     };
-    //  localStorage.setItem("user", JSON.stringify(user));
     dispatch(action);
   };
 
   const salir = () => {
-    localStorage.removeItem("user");
+    // localStorage.removeItem("user");
     const action = {
       type: types.salir,
     };

@@ -9,9 +9,7 @@ export const PlanCard = ({ propiedades, opcionMiValue }) => {
   const { seleccionar } = useContext(AuthContext);
   const onResumen = () => {
     seleccionar(propiedades.name,`$${calculoDesc()} al mes`);
-    navigate("/cotizar/resumen", {
-      replace: true,
-    });
+    navigate("/cotizar/resumen");
   };
   const calculoDesc = () => {
     if (!opcionMiValue) {

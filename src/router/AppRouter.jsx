@@ -1,11 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { RegistroHijoRutas, RegistroRutas } from "../registro";
 import { CotizarHijoRutas, CotizarRutas } from "../planes";
+import { PrivateRoute } from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
     path: "/cotizar",
-    element:<CotizarRutas></CotizarRutas>,
+    element:<PrivateRoute><CotizarRutas></CotizarRutas></PrivateRoute>,
     children: CotizarHijoRutas
   },  
   {

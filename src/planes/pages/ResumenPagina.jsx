@@ -7,12 +7,9 @@ export const ResumenPagina = () => {
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  console.log(user);
 
   const onAtras = () => {
-    navigate("/cotizar/planes", {
-      replace: true,
-    });
+    navigate("/cotizar/planes");
   };
 
   return (

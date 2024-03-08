@@ -32,9 +32,7 @@ export const Formulario1 = () => {
     ) {
       setErrorValue(false);
       registrar(numberValue.numero,dniValue.documento);
-      navigate("/cotizar/planes", {
-        replace: true,
-      });
+      navigate("/cotizar/planes");
       
 
     } else {

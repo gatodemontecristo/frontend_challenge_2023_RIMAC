@@ -31,9 +31,7 @@ export const PlanesPagina = () => {
   };
 
   const { usuario, isLoading } = useFetchUser();
-  // const { planes,isLoading2 } = useEffect(useFetchPlans();
 
-  // console.log(planes);
 
   const [planes, setplanes] = useState([]);
   const [isLoading2, setIsLoading] = useState(true);
@@ -71,14 +69,11 @@ const obtenerEdad =(dateString)=>{
     return age;
 }
 const edadlimite = obtenerEdad(usuario.birthDay);
-// console.log(getAge("02-04-1990"));
 
   const navigate = useNavigate();
   const onAtras = () => {
     salir();
-    navigate("/registro", {
-      replace: true,
-    });
+    navigate("/registro");
   };
 
   return (
